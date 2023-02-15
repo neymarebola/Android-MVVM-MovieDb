@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical"
+        tools:context=".ui.fragments.SearchFragment">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/search_movies"
+                android:textAppearance="@style/homeCategoryName" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- search view !-->
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/edt_background"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawableRight="@drawable/ic_close"
+            android:textColor="@color/white"
+            android:drawablePadding="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_search_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp" />
+
+    </LinearLayout>
+</layout>
